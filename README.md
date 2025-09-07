@@ -12,6 +12,19 @@ I updated to use current XCode and Mac OS formats (macOS 15 and XCode 16.4).
 Mostly I wanted this to run on my current machine which is an M2 which suffered from the legacyScreensaver-NoExitBug where the process would run indefinte and cloak up CPU/Memory. 
 its build to support both arm64 and x86_64 .
 
+Screensaver can't be opened?
+
+Setting the screensaver and showing only black screen may be related to this issue. After unlocking from the black screen, it may show an alert like
+
+Screensaver can’t be opened because Apple cannot check it for malicious software
+
+Here is what you can do to solve it:
+
+Open System Settings
+Go to Privacy & Security
+Scroll down to the bottom and click allow Snoopy.saver to open anyway
+Go back to Screen Saver in System Settings, and select Snoopy as the screensaver
+Click on "Open Anyway" when the alert pops up again
 
 Red Pill is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
