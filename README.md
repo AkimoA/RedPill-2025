@@ -9,7 +9,7 @@ This is Red Pill, a 3D OpenGL "Matrix" screensaver for Mac OS X and macOS.
 Yes, this is a fork of a fork with a spoon :)
 I updated to use current XCode and Mac OS formats (macOS 15 and XCode 16.4). 
 
-Mostly I wanted this to run on my current machine which is an M2 which suffered from the legacyScreensaver-NoExitBug where the process would run indefinte and cloak up CPU/Memory. 
+Mostly I wanted this to run on my current machine which is a M2 which suffered from the legacyScreensaver-NoExitBug where the process would run indefinte after closing the screensaver and cloak up CPU/Memory. 
 its build to support both arm64 and x86_64 .
 
 Screensaver can't be opened?
@@ -25,6 +25,8 @@ Go to Privacy & Security
 Scroll down to the bottom and click allow RedPill.saver to open anyway
 Go back to Screen Saver in System Settings, and select Redpill as the screensaver
 Click on "Open Anyway" when the alert pops up again
+
+the ultimate goal would be to rewrite it in Swift / Metal
 
 Red Pill is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
