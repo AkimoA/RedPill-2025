@@ -22,8 +22,8 @@ Here is what you can do to solve it:
 
 Open System Settings
 Go to Privacy & Security
-Scroll down to the bottom and click allow Snoopy.saver to open anyway
-Go back to Screen Saver in System Settings, and select Snoopy as the screensaver
+Scroll down to the bottom and click allow RedPill.saver to open anyway
+Go back to Screen Saver in System Settings, and select Redpill as the screensaver
 Click on "Open Anyway" when the alert pops up again
 
 Red Pill is free software; you can redistribute it and/or modify
