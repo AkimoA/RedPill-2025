@@ -76,7 +76,7 @@
 // The About button takes them to a web site
 - (IBAction)about:(id)sender
 {
-   [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://wwm4u.de/redpill"]];
+   [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://moas.design"]];
 }
 
 - (IBAction)cancel:(id)sender
