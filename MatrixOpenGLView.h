@@ -25,9 +25,17 @@
 // object's data, preferences, and so on.
 
 #import <AppKit/AppKit.h>
-#import <OpenGL/gl.h>
+//#import <OpenGL/OpenGL.h>
+//#import <OpenGL/gl.h>
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 @interface MatrixOpenGLView : NSOpenGLView {
 }
+- (void)drawRect:(NSRect)dirtyRect;
+//- (void)reshape;
 
 @end
+
+#pragma clang diagnostic pop

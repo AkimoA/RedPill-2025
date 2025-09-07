@@ -17,7 +17,8 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 // or visit <URL:http://www.fsf.org/>
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #import <OpenGL/glu.h>
 #import "GLUtils.h"
 
@@ -49,17 +50,14 @@ const char* get_gl_error_name(GLenum error)
 
 __private_extern__ void CheckGLError(const char *func, const char *note)
 {
-  static int errcount = 0;
+ // static int errcount = 0;
+
 
   GLenum error = glGetError();
-  if (error)
-  {
-    if (errcount < 4) {
-      errcount += 1;
-      NSLog(@"%s.%s: %s (%d)", func, note, get_gl_error_name(error), error);
-    }
-  }
-}
+  if (error != GL_NO_ERROR) {
+      NSLog(@"OpenGL Error: %d", error);
+  }  }
+
 
 __private_extern__ void LogError(const char *func, const char *note)
 {
@@ -70,3 +68,4 @@ __private_extern__ void LogError(const char *func, const char *note)
     NSLog(@"%s: %s", func, note);
   }
 }
+#pragma clang diagnostic pop

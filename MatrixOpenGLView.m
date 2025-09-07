@@ -17,8 +17,12 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 // or visit <URL:http://www.fsf.org/>
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 
 #import "MatrixOpenGLView.h"
+
 
 @implementation MatrixOpenGLView
 
@@ -32,3 +36,4 @@
 }
 
 @end
+#pragma clang diagnostic pop

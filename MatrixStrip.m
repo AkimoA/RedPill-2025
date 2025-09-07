@@ -18,11 +18,14 @@
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 // or visit <URL:http://www.fsf.org/>
 
+
 #import <OpenGL/gl.h>
 #import "MatrixStrip.h"
 #import "MatrixView.h"
 #import "MatrixMacros.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 // Given bottom,left coordinates of a 32x32 square within a 256x256 texture,
 // this is the amount to add to both coordinates to get the top,right pixel
 // of the same texture. It's equal to 31.0 / 256.0.
@@ -526,3 +529,4 @@ float zapchance;
    return FALSE;
 }
 @end
+#pragma clang diagnostic pop

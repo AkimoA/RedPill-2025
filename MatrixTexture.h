@@ -17,6 +17,8 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
 // or visit <URL:http://www.fsf.org/>
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
 #import <Cocoa/Cocoa.h>
 #import <OpenGL/OpenGL.h>
@@ -62,3 +64,4 @@
 // Accessor method for whether the file has been loaded successfully yet
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL fileLoaded;
 @end
+#pragma clang diagnostic pop

@@ -17,6 +17,9 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
 // or visit <URL:http://www.fsf.org/>
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 
 #import "MatrixView.h"
 #import <AppKit/AppKit.h>
@@ -24,6 +27,7 @@
 #import "MatrixMacros.h"
 #import "MatrixStripParams.h"
 #import <GLKit/GLKMatrix4.h>
+#import <os/log.h>
 
 @implementation MatrixView
 
@@ -46,6 +50,7 @@
 {
 // Note that double buffering makes performance worse and doesn't improve display quality,
 // so we don't demand it
+  
 NSOpenGLPixelFormatAttribute attributes[] = {
    NSOpenGLPFAColorSize, 16,
    NSOpenGLPFAAlphaSize, 8,
@@ -59,6 +64,10 @@ NSOpenGLPixelFormat *pixformat;
       LogError("initWithFrame", "Failed to initialize screensaver environment. Not my fault.");
       return nil;
    }
+  [[NSDistributedNotificationCenter defaultCenter] addObserver:self
+                                                          selector:@selector(willStop)
+                                                              name:@"com.apple.screensaver.willstop"
+                                                            object:nil];
 
    // Work out what our defaults are called
    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
@@ -177,6 +186,7 @@ NSOpenGLPixelFormat *pixformat;
 
 - (void)startAnimation
 {
+  
    // Anything to do?
    if (mainScreenOnly && !isMainScreen) {
       return;
@@ -210,14 +220,30 @@ NSOpenGLPixelFormat *pixformat;
    [super startAnimation];
 }
 
-- (void)stopAnimation
-{
-   // Release the textures
-   if (matrixGlyphs != nil) {
-      // very important!
-      matrixGlyphs = nil;
-   }
-   [super stopAnimation];
+- (void)stopAnimation {
+    [super stopAnimation];
+    
+    // Aggressive cleanup - stop everything
+    if (glview) {
+        [[glview openGLContext] makeCurrentContext];
+        glFlush();
+        glFinish();
+        [[glview openGLContext] clearDrawable];
+        [glview removeFromSuperview];
+        glview = nil;
+    }
+    
+    [NSOpenGLContext clearCurrentContext];
+    
+    // Release textures
+    if (matrixGlyphs != nil) {
+        matrixGlyphs = nil;
+    }
+}
+
+- (void)willStop {
+    NSLog(@"Matrix willStop called - forcing exit");
+    exit(0);
 }
 
 // Draw the current frame
@@ -501,11 +527,14 @@ MatrixStrip *strip;
 
 /// SECTION FOUR
 /// Clean up after ourselves
-- (void) dealloc
-{
-   [[NSNotificationCenter defaultCenter]
-      removeObserver:self
-                name:PREFS_NOTIFICATION
-              object:nil];
+- (void)dealloc {
+    [[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
+    // ... other cleanup
 }
-@end
+
+
+
+
+
+  @end
+  #pragma clang diagnostic pop- (void)drawGL {
