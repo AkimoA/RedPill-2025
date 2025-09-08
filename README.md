@@ -16,7 +16,7 @@ Screensaver can't be opened?
 
 Setting the screensaver and showing only black screen may be related to this issue. After unlocking from the black screen, it may show an alert like
 
-Screensaver can’t be opened because Apple cannot check it for malicious software
+'Screensaver can’t be opened because Apple cannot check it for malicious software'
 
 Here is what you can do to solve it:
 
@@ -26,7 +26,7 @@ Scroll down to the bottom and click allow RedPill.saver to open anyway
 Go back to Screen Saver in System Settings, and select Redpill as the screensaver
 Click on "Open Anyway" when the alert pops up again
 
-the ultimate goal would be to rewrite it in Swift / Metal
+
 
 Red Pill is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
