@@ -247,13 +247,13 @@ NSOpenGLPixelFormat *pixformat;
 - (void)screenSaverWillStop {
     NSLog(@"screenSaverWillStop called - applying macOS 26 workaround");
     
-    
+    // Check for macOS 26 or later (version 26.x.x)
     NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
-    if (version.majorVersion >= 15) { // macOS 26 check
+    if (version.majorVersion >= 26) {
         // Hack to prevent screensaver from restarting automatically
+        NSLog(@"macOS 26+ detected, applying 2-second sleep workaround");
         sleep(2);
     }
-    
     
     [[NSApplication sharedApplication] terminate:nil];
 }
