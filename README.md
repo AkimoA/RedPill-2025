@@ -7,7 +7,7 @@ This is Red Pill, a 3D OpenGL "Matrix" screensaver for Mac OS X and macOS.
 * Copyright @ 2025 - AkimoA
 
 Yes, this is a fork of a fork with a spoon :)
-I updated to use current XCode and Mac OS formats (macOS 15 and XCode 16.4). 
+I updated to use current XCode and Mac OS formats (macOS 26 and XCode 26.0.1). 
 
 Mostly I wanted this to run on my current machine which is a M2 which suffered from the legacyScreensaver-NoExitBug where the process would run indefinte after closing the screensaver and cloak up CPU/Memory. 
 its build to support both arm64 and x86_64 .
