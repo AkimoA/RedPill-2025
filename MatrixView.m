@@ -64,10 +64,13 @@ NSOpenGLPixelFormat *pixformat;
       LogError("initWithFrame", "Failed to initialize screensaver environment. Not my fault.");
       return nil;
    }
-  [[NSDistributedNotificationCenter defaultCenter] addObserver:self
-                                                          selector:@selector(willStop)
-                                                              name:@"com.apple.screensaver.willstop"
-                                                            object:nil];
+  NSLog(@"[MATRIX] Setting up willStop notification observer");
+  
+      [[NSDistributedNotificationCenter defaultCenter] addObserver:self
+                                                           selector:@selector(screenSaverWillStop)
+                                                               name:@"com.apple.screensaver.willstop"
+                                                             object:nil];
+  NSLog(@"[MATRIX] willStop notification observer registered");
 
    // Work out what our defaults are called
    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
@@ -241,9 +244,18 @@ NSOpenGLPixelFormat *pixformat;
     }
 }
 
-- (void)willStop {
-    NSLog(@"Matrix willStop called - forcing exit");
-    exit(0);
+- (void)screenSaverWillStop {
+    NSLog(@"screenSaverWillStop called - applying macOS 26 workaround");
+    
+    
+    NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
+    if (version.majorVersion >= 15) { // macOS 26 check
+        // Hack to prevent screensaver from restarting automatically
+        sleep(2);
+    }
+    
+    
+    [[NSApplication sharedApplication] terminate:nil];
 }
 
 // Draw the current frame
