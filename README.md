@@ -1,6 +1,12 @@
 # RedPill-2025
 
-A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes.
+A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes
+
+
+## 🎬 Demo
+
+[![RedPill-2025 Demo Video](https://img.youtube.com/vi/dM-aSSvJqhg/maxresdefault.jpg)](https://www.youtube.com/watch?v=dM-aSSvJqhg)
+
 
 ![Matrix Digital Rain](https://img.shields.io/badge/Matrix-Digital%20Rain-green?style=for-the-badge)
 ![macOS](https://img.shields.io/badge/macOS-13.0%2B-blue?style=for-the-badge)
