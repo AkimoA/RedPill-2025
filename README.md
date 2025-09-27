@@ -14,8 +14,8 @@ A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes
 
 ## 🚀 Features
 
-- **Classic Matrix digital rain effect** with authentic green characters
-- **Universal binary** supporting both Apple Silicon (M1/M2/M3) and Intel Macs
+
+- **Universal binary** supporting both Apple Silicon and Intel Macs
 - **Modern compatibility** fixes for macOS Sonoma, Sequoia, and future versions
 - **Optimized performance** with proper memory management
 - **Smooth 60 FPS** animation with configurable settings
