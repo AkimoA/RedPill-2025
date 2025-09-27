@@ -92,7 +92,7 @@ This version includes **automatic fixes** for the infamous `legacyScreenSaver` p
 
 - **macOS Sonoma/Sequoia:** Uses proven `exit(0)` termination
 - **macOS 26+ (Tahoe):** Uses delayed termination workaround
-- **Automatic detection** of macOS version applies appropriate fix
+
 
 ### Black Screen Issues
 If the screensaver shows only a black screen:
@@ -123,16 +123,6 @@ You can redistribute it and/or modify it under the terms of the GNU General Publ
 
 This program is distributed in the hope that it will be useful, but **WITHOUT ANY WARRANTY**; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU General Public License](LICENSE) for more details.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### Development Setup
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 🔗 Links
 
