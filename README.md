@@ -125,8 +125,6 @@ This program is distributed in the hope that it will be useful, but **WITHOUT AN
 
 
 ## 🔗 Links
-
-- **Original RedPill:** [mathew's original project](http://www.botskonet.com/redpill/)
 - **Previous Fork:** [Jason Short's RedPill2](https://github.com/jasonshortphd/RedPill2)
 - **GNU GPL License:** [https://www.fsf.org/](https://www.fsf.org/)
 - **Report Issues:** [GitHub Issues](../../issues)
