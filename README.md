@@ -2,7 +2,7 @@
 
 A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes.
 
-![Matrix Digital Rain]([https://img.shields.io/badge/Matrix-Digital%20Rain-green?style=for-the-badge](https://github.com/AkimoA/RedPill-2025/blob/master/thumbnail%402x.png))
+![Matrix Digital Rain](https://img.shields.io/badge/Matrix-Digital%20Rain-green?style=for-the-badge)
 ![macOS](https://img.shields.io/badge/macOS-13.0%2B-blue?style=for-the-badge)
 ![Architecture](https://img.shields.io/badge/Architecture-arm64%20%7C%20x86__64-orange?style=for-the-badge)
 
