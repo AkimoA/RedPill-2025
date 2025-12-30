@@ -16,12 +16,7 @@ A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes
 
 - **Universal binary** supporting both Apple Silicon and Intel Macs
 - **Modern compatibility** fixes for macOS Sonoma, Sequoia, and future versions
-- **Smooth 60 FPS** animation with configurable settings
-
-
-
 - **macOS 13.0** (Ventura) or later
-- **Metal-compatible GPU** (all modern Macs)
 - **Architecture:** arm64 (Apple Silicon) or x86_64 (Intel)
 
 ##  Installation
