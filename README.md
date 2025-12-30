@@ -1,6 +1,6 @@
 # RedPill-2025
 
-A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes
+A 3D OpenGL "Matrix" screensaver for macOS 
 
 
 
