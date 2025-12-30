@@ -3,7 +3,7 @@
 A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes
 
 
-## 🎬 Demo
+
 
 [![RedPill-2025 Demo Video](https://img.youtube.com/vi/dM-aSSvJqhg/maxresdefault.jpg)](https://www.youtube.com/watch?v=dM-aSSvJqhg)
 
@@ -12,21 +12,19 @@ A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes
 ![macOS](https://img.shields.io/badge/macOS-13.0%2B-blue?style=for-the-badge)
 ![Architecture](https://img.shields.io/badge/Architecture-arm64%20%7C%20x86__64-orange?style=for-the-badge)
 
-## 🚀 Features
 
 
 - **Universal binary** supporting both Apple Silicon and Intel Macs
 - **Modern compatibility** fixes for macOS Sonoma, Sequoia, and future versions
-- **Optimized performance** with proper memory management
 - **Smooth 60 FPS** animation with configurable settings
 
-## 📋 System Requirements
+
 
 - **macOS 13.0** (Ventura) or later
 - **Metal-compatible GPU** (all modern Macs)
 - **Architecture:** arm64 (Apple Silicon) or x86_64 (Intel)
 
-## 🛠 Installation
+##  Installation
 
 ### Option 1: Direct Installation
 1. Download the latest `RedPill.saver` from [Releases](../../releases)
@@ -43,7 +41,7 @@ A 3D OpenGL "Matrix" screensaver for macOS with modern compatibility fixes
 2. Open **System Settings** → **Desktop & Screen Saver**
 3. Select **Red Pill** from the screensaver list
 
-## 🔒 Security Notice
+## macOS Security Notice
 
 ### "Screensaver can't be opened" Error
 
@@ -59,7 +57,7 @@ If you see this message: *"Screensaver can't be opened because Apple cannot chec
 
 This is normal for unsigned screensavers and is safe to allow.
 
-## 🏗 Building from Source
+## Building from Source
 
 ### Prerequisites
 - **Xcode 15.0** or later
@@ -85,7 +83,7 @@ xcodebuild -project RedPill.xcodeproj -target RedPill -configuration Release bui
 cp -R ~/Library/Developer/Xcode/DerivedData/RedPill-*/Build/Products/Release/RedPill.saver ~/Library/Screen\ Savers/
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### legacyScreenSaver Process Issues
 This version includes **automatic fixes** for the infamous `legacyScreenSaver` process that would consume CPU/memory after screensaver exit. The fixes are version-specific:
@@ -108,13 +106,13 @@ If the screensaver shows only a black screen:
 
 
 
-## 📜 License & Credits
+## License & Credits
 
 ### Copyright
 - **© 2002-2012** mathew ([meta@pobox.com](mailto:meta@pobox.com)) - Original creator
 - **© 2016** px3 ([rr@rdsroot.net](mailto:rr@rdsroot.net)) - First modernization 
 - **© 2020** Jason Short - macOS 10.15 compatibility
-- **© 2025** AkimoA - macOS 26.x.x compatibility and Apple Silicon support
+- **© 2025** AkimoA - macOS 26.x.x compatibility & Legacy Screensaver Workaround from Aerial Project ( Thank you ) 
 
 ### License
 This project is free software licensed under the **GNU General Public License v3.0**.
@@ -124,15 +122,10 @@ You can redistribute it and/or modify it under the terms of the GNU General Publ
 This program is distributed in the hope that it will be useful, but **WITHOUT ANY WARRANTY**; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU General Public License](LICENSE) for more details.
 
 
-## 🔗 Links
+##  Links
 - **Previous Fork:** [Jason Short's RedPill2](https://github.com/jasonshortphd/RedPill2)
 - **GNU GPL License:** [https://www.fsf.org/](https://www.fsf.org/)
 - **Report Issues:** [GitHub Issues](../../issues)
 
 ---
 
-### 🎯 Take the Red Pill... 
-
-*"This is your last chance. After this, there is no going back. You take the blue pill—the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill—you stay in Wonderland, and I show you how deep the rabbit hole goes."*
-
-**The Matrix has you... but now it runs properly on Apple Silicon.** 🚀
